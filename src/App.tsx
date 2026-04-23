@@ -986,7 +986,7 @@ export default function App() {
               >
                 Unidades
               </div>
-              {units.map((u) => (
+              {[...units].sort((a, b) => a.name.localeCompare(b.name, 'pt-BR')).map((u) => (
                 <button
                   key={u.id}
                   onClick={() => setSelectedId(u.id)}
